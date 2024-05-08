@@ -14,6 +14,9 @@ public class Main {
         System.out.println(app.encryptPassword("password")); // Insecure encryption
         System.out.println(PASSWORD); // Insecure encryption
 
+        VulnerableCode vulnerableCode = new VulnerableCode();
+        System.out.println(vulnerableCode.getApiKey()); // Insecure encryption
+
     }
 
 
