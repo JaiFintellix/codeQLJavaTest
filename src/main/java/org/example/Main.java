@@ -46,6 +46,7 @@ public class Main {
     public int encryptPassword(String password) {
         // Insecure encryption method using weak algorithm
         // DO NOT USE THIS IN PRODUCTION
+        System.out.println("Random Code to create a PR");
         return password.hashCode(); // Hashing algorithm not suitable for password storage
     }
 
