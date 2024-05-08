@@ -2,12 +2,17 @@ package org.example;
 import java.sql.*;
 
 public class Main {
+
+    public static String PASSWORD = "PASSWORD123";
+
+
     public static void main(String[] args) {
         System.out.println("Hello world!");
         Main app = new Main();
         app.getUserInfo("admin'; DROP TABLE users; --"); // SQL injection attempt
         System.out.println(app.displayMessage("<script>alert('XSS attack')</script>")); // XSS attack
         System.out.println(app.encryptPassword("password")); // Insecure encryption
+        System.out.println(PASSWORD); // Insecure encryption
 
     }
 
