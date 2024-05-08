@@ -1,9 +1,33 @@
 name: Build and Deploy
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        required: true
+        default: dev
+        type: choice
+        options:
+          - dev
+          - qa
+          - stage
+      helm_values_file:
+        description: 'Helm values file'
+        required: true
+        default: values-dev.yaml
+        type: choice
+        options:
+          - values-dev.yaml
+          - values-qa.yaml
+          - values-stage.yaml
+          - values-scheduler.yaml
+          - values-consumer.yaml
+      helm_branch:
+        description: 'Helm branch'
+        required: true
+        default: rc-1.1
+        type: string
 
 jobs:
   build:
