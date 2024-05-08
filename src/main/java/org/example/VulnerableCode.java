@@ -62,6 +62,7 @@ public class VulnerableCode {
     private static final String API_KEY = "YOUR_API_KEY";
 
     public String getApiKey() {
+        System.out.println("Random Text Change");
         return API_KEY;
     }
 }
