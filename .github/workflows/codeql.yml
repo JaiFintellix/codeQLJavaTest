@@ -12,13 +12,13 @@
 name: "CodeQL"
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-    paths-ignore:
-      - '**/*.md'
-      - '**/*.txt'
+#  push:
+#    branches: [ "master" ]
+#  pull_request:
+#    branches: [ "master" ]
+#    paths-ignore:
+#      - '**/*.md'
+#      - '**/*.txt'
 
 jobs:
   analyze:
