@@ -94,5 +94,11 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
-      # with:
+      with:
+        queries: codeql-java-queries
+
+        # Include additional query packs (if available)
+        additional-query-packs: |
+          - microsoft/coding-standards
+          - github/security-queries
       #   category: "/language:${{matrix.language}}"
