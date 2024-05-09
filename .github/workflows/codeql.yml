@@ -63,7 +63,7 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: '17'
-        mvn-version: '3.6.3'
+        cache: 'maven'
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
@@ -86,11 +86,6 @@ jobs:
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
     - if: matrix.build-mode == 'manual'
       run: |
-        echo 'If you are using a "manual" build mode for one or more of the' \
-          'languages you are analyzing, replace this with the commands to build' \
-          'your code, for example:'
-        echo '  make bootstrap'
-        echo '  make release'
         mvn clean package
 
     - name: Perform CodeQL Analysis
