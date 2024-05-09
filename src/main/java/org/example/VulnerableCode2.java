@@ -27,6 +27,6 @@ public class VulnerableCode2 {
 
         // Insecure Random Number Generator Vulnerability
         double randomValue = Math.random();
-        System.out.println("Random value: " + randomValue);
+        System.out.println("Random value2: " + randomValue);
     }
 }
