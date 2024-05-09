@@ -45,7 +45,7 @@ jobs:
       fail-fast: false
       matrix:
         language: [ 'java-kotlin' ]
-        build-mode: [ 'manual' ]
+        build-mode: [ 'none' ]
         # CodeQL supports the following values keywords for 'language': 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift'
         # Use `c-cpp` to analyze code written in C, C++ or both
         # Use 'java-kotlin' to analyze code written in Java, Kotlin or both
@@ -63,7 +63,7 @@ jobs:
       with:
         distribution: 'zulu'
         java-version: '17'
-        cache: 'maven'
+        # cache: 'maven'
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
